@@ -1,8 +1,41 @@
 <%layout("./layouts/boilerplate")%>
-<link rel="stylesheet" href="/stylesheets/soldiercard.css">
-
-
 <a href="/account">acoount</a>
+<link rel="stylesheet" href="/stylesheets/soldiercard.css">
+<link rel="stylesheet" href="/stylesheets/navbar.css">
+
+
+<div class="container">
+    <h1>
+       <a href="#menu" class="index">Click me</a>
+    </h1>
+       
+   <div class="popover" id="menu">
+    <div class = 'content'>
+     <a href="#" class="close"></a>
+      <div class = 'nav'>
+       <ul class = 'nav_list'>
+         
+         <div class = 'nav_list_item'>
+         <li><a href="/">Home</a></li>
+         </div>
+        <div class = 'nav_list_item'>
+           <li><a href="/about">About</a></li>
+         </div>
+       <div class = 'nav_list_item'>
+         <li><a href="/soldiers">Soldiers</a></li>
+         </div>
+       <div class = 'nav_list_item'>
+         <li><a href="/account">Account</a></li>
+         </div>
+        <div class = 'nav_list_item'>
+           <li><a href="/contact">Contact</a></li>
+         </div>
+         
+       </ul>
+     </div>
+    </div>
+    </div>
+    </div>
 
     <h1>here we go with soldier info</h1>
     <a href="/soldiers/new">new</a>

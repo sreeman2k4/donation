@@ -7,7 +7,7 @@ const cardSchema=new mongoose.Schema({
         type:String,
     },
     card_number:{
-        type:Number,
+        type:String,
     },
     card_type:{
         type:String,
@@ -20,7 +20,13 @@ const cardSchema=new mongoose.Schema({
     },
     amount:{
         type:Number,
-    }
+    },
+    soldiers:[
+        {
+        type:mongoose.Schema.Types.ObjectId,
+         ref:"Soldier",
+        }
+    ],
 })
 
 module.exports=mongoose.model("Card",cardSchema);

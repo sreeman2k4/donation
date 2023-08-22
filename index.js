@@ -78,7 +78,7 @@ app.use((req,res,next)=>{
 
 
 
-mongoose.connect("mongodb+srv://sreeman:saiveer2k4@cluster0.l01jucc.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect('mongodb://localhost:27017/donation',{useNewUrlParser:true,useUnifiedTopology:true})
 
  .then(()=>{
     console.log("mongo connection open for donation");
@@ -99,6 +99,6 @@ app.use((err,req,res,next)=>{
     const{status=500,message="something went wrong"}=err;
     res.status(status).render("error",{err});
 })
-app.listen(3000,()=>{
+app.listen(4000,()=>{
     console.log("started donation server")
 })

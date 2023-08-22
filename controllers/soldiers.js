@@ -59,14 +59,15 @@ module.exports.donatesoldier=async(req,res)=>{
 
     
     result.payments.push(card);
+    card.soldiers.push(soldier);
     user.payments.push(card);
     await card.save();
     await result.save();
     await user.save();
-    if(finalamount>5000000)
+    if(finalamount>=5000000)
     {
         await Soldier.deleteOne(result);
-        res.send('successfully completed');
+        res.render("soldiers/success.ejs");
     }
    
     res.redirect(`/soldiers/${result._id}`);
