@@ -78,7 +78,7 @@ app.use((req,res,next)=>{
 
 
 
-mongoose.connect('mongodb+srv://gudlasreeman:21je0369@cluster0.zs5byvs.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect('mongodb://localhost:27017/donation',{useNewUrlParser:true,useUnifiedTopology:true})
 
  .then(()=>{
     console.log("mongo connection open for donation");
